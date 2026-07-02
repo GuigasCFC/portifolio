@@ -294,38 +294,61 @@
   border: 1px solid rgba(59,158,255,0.2);
   color: var(--blue-light);
 }
-.project-link.demo:hover { background: rgba(59,158,255,0.25); box-shadow: 0 0 16px rgba(59,158,255,0.15); }
+
+.project-link.demo:hover { 
+  background: rgba(59,158,255,0.25); 
+  box-shadow: 0 0 16px rgba(59,158,255,0.15); 
+}
+
 .project-thumb--soon {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: var(--bg-card);
   background-image: repeating-linear-gradient(
     45deg,
     transparent,
     transparent 18px,
-    rgba(255,255,255,.04) 18px,
-    rgba(255,255,255,.04) 19px
+    rgba(255,255,255,.03) 18px,
+    rgba(255,255,255,.03) 19px
   );
 }
 
+.project-thumb--soon .project-thumb-overlay {
+  display: none !important;
+}
+
 .project-thumb-soon-inner {
-  display: flex;
+  position: relative;
+  z-index: 10;
+  display: flex !important;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  z-index: 1;
+  gap: 12px;
   color: rgba(255,255,255,.35);
   font-size: .85rem;
   font-weight: 500;
   letter-spacing: .05em;
 }
-
-.project-thumb-soon-inner i {
-  font-size: 1.4rem;
+#prev-portfolio {
+  background-image: none !important;
+  background: var(--bg-card) !important;
 }
 
-/* Botoes desabilitados */
+.project-thumb-soon-inner i {
+  width: 52px;
+  height: 52px;
+  font-size: 1.4rem;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  color: rgba(255,255,255,.35);
+}
+
 .project-link.disabled {
   opacity: .35;
   cursor: not-allowed;

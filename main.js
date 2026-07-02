@@ -170,7 +170,6 @@ function initProjectPreviews() {
   drawPreview('prev-comments', drawComments);
   drawPreview('prev-pizza', drawPizza);
   drawPreview('prev-landing', drawLanding);
-  drawPreview('prev-portfolio', drawPortfolio);
 }
 function drawPreview(id, fn) {
   const container = document.getElementById(id);
