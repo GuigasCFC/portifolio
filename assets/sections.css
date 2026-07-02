@@ -295,6 +295,42 @@
   color: var(--blue-light);
 }
 .project-link.demo:hover { background: rgba(59,158,255,0.25); box-shadow: 0 0 16px rgba(59,158,255,0.15); }
+.project-thumb--soon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 18px,
+    rgba(255,255,255,.04) 18px,
+    rgba(255,255,255,.04) 19px
+  );
+}
+
+.project-thumb-soon-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 1;
+  color: rgba(255,255,255,.35);
+  font-size: .85rem;
+  font-weight: 500;
+  letter-spacing: .05em;
+}
+
+.project-thumb-soon-inner i {
+  font-size: 1.4rem;
+}
+
+/* Botoes desabilitados */
+.project-link.disabled {
+  opacity: .35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
 
 @media (max-width: 760px) {
   .projects-grid { 
